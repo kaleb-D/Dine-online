@@ -6,6 +6,19 @@
     <title>signup</title>
 </head>
 <body>
-
+    <div class="container">
+    <h2>Create Account</h2>
+    <a href="index.html">Back to Home page</a>
+    <form action="your_signup_backend.php" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+    <div class="link">
+        <a href="signIn.html">Already have an account?</a>
+    </div>
+</div>
 </body>
 </html>
