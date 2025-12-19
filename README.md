@@ -1,12 +1,13 @@
 DINE--ONLINE: Modern Restaurant and Ordering Platform
 
-🍽️ Project Overview
+Project Overview
 
 DINE--ONLINE is a comprehensive, multi-page front-end application built for a modern restaurant or online food service. It provides all the necessary user interfaces (UIs) to guide a customer from browsing the menu to placing an order and completing a secure checkout.
 
 This project focuses on clear separation of concerns, ensuring a highly maintainable and scalable front-end architecture, suitable for rapid deployment and easy integration with a back-end system.
 
-🌟 Key Features
+
+Key Features
 
 Feature Category
 
@@ -32,7 +33,7 @@ SEO and Indexing Control
 
 Includes the necessary root files (robots.txt, sitemap.xml) to effectively guide search engine crawlers, ensuring optimal public page indexing while protecting internal service routes.
 
-🚀 Technologies Used
+ Technologies Used
 
 This project adheres to a simple, yet robust, foundational technology stack:
 
@@ -42,7 +43,7 @@ CSS3 (Cascading Style Sheets): Used for all visual presentation, styling, and re
 
 JavaScript (Vanilla JS): Handles client-side interactivity, DOM manipulation, form validation, and preparing data before it's sent to an API (logic centralized in assets/js/main.js).
 
-📁 File Structure
+File Structure
 
 The architecture is organized around three main types of content: public-facing pages, private service flows, and static assets. This structure clearly delineates where content lives and simplifies navigation for developers.
 
@@ -70,7 +71,7 @@ DINE--ONLINE/
 └── sitemap.xml                     # The official index of all public URLs for search engine discovery.
 
 
-📚 Documentation (docs/)
+Documentation (docs/)
 
 The docs/ folder is dedicated to technical and internal specifications. It ensures all team members have a consistent reference point for development practices. Key contents often include:
 
@@ -80,7 +81,7 @@ Style Guides: Instructions for writing consistent HTML and CSS, defining color v
 
 Setup and Contribution: Comprehensive guides on getting the development environment running and the rules for submitting code contributions.
 
-🛠️ Installation and Setup
+Installation and Setup
 
 Prerequisites
 
@@ -108,11 +109,11 @@ python -m http.server 8000
 Access the Application:
 Open your browser and navigate to: http://localhost:8000
 
-📝 License
+ License
 
 This project is licensed under the MIT License.
 
-📞 Contact
+Contact
 
 For any questions or feedback, please feel free to reach out:
 

@@ -3,20 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login in</title>
+    <title>Dine Online | Sign In</title>
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-    <h2>Login</h2>
-    <a href="index.html">Back to Home page</a>
-    <form action="your_login_backend.php" method="POST">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
-    <div class="link">
-        <a href="signUp.html">Create an account</a>
+<body class="auth-body">
+    
+    <div class="auth-wrapper">
+        <header class="auth-header">
+            <a href="../../index.html" class="logo-link">
+                <img src="../../logo.png" alt="Dine Online Logo" class="logo-image" />
+                <span class="logo-text">Dine Online</span>
+            </a>
+            <h1>Sign In</h1>
+            <p>Welcome back! Please enter your credentials to continue.</p>
+        </header>
+
+        <form class="auth-form" action="your_login_backend.php" method="POST">
+            
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-sign-in-alt"></i> Sign In
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Don't have an account? <a href="signUp.html">Create an account</a></p>
+            <p class="lang-switch-link">
+                <i class="fas fa-language"></i> Switch to <a href="amhSignIn.html">Amharic</a>
+            </p>
+            <a href="../../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
     </div>
-</div>
+    
 </body>
 </html>
