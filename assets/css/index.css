@@ -1,0 +1,368 @@
+/* 3. Hero Section (Header) */
+.hero-section {
+  /* Base styles for content positioning */
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 50px 20px;
+  margin-bottom: 40px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* The main background container holds the images and manages the animation
+*/
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Image 1 is the default background */
+  background-image: url("../images/hero-1.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  /* Apply the animation to control the second image opacity */
+  animation: imageFade 10s infinite linear; /* 10s cycle (5s per image) */
+}
+
+/* The overlay is layered on top of the slideshow to ensure text contrast 
+*/
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Darker overlay */
+  z-index: 1;
+}
+
+/* * The Keyframe Animation: Switches the background image at the 50% mark 
+*/
+@keyframes imageFade {
+  /* Starts with Image 1 (which is the default background-image) */
+  0% {
+    background-image: url("../images/hero-1.jpeg");
+  }
+
+  /* Hold Image 1 for 40% of the duration (4 seconds) */
+  40% {
+    background-image: url("../images/hero-1.jpeg");
+  }
+
+  /* At 50%, instantly switch to Image 2 */
+  50% {
+    background-image: url("../images/hero-2.jpeg");
+  }
+
+  /* Hold Image 2 until near the end (90%) */
+  90% {
+    background-image: url("../images/hero-2.jpeg");
+  }
+
+  /* At 100%, switch back to Image 1 to loop seamlessly */
+  100% {
+    background-image: url("../images/hero-1.jpeg");
+  }
+}
+
+/* Content remains centered on top of the slideshow */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Content Sections */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-section {
+  padding: 60px 0;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+}
+
+/* About Section Specific Layout */
+.about-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-light);
+}
+
+.about-section .section-text {
+  flex: 1;
+}
+
+.about-section .section-image-placeholder {
+  flex: 1;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.icon-large {
+  font-size: 8rem;
+}
+
+/* Menu Cards  */
+
+.menu-preview-section {
+  padding-top: 20px;
+}
+
+.menu-container {
+  display: grid;
+  /* Responsive grid: minimum column size 280px */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.menu-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .card-image {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+}
+.card-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Ensures equal card height */
+}
+
+.card-footer {
+  margin-top: auto; /* Push to the bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid var(--light-bg);
+}
+
+.card-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.add-to-cart-btn {
+  padding: 8px 15px;
+  font-size: 1rem;
+}
+
+.menu-view-all {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* 4.6 New Deal/Promo Section  */
+.new-deal-section {
+  background-color: var(--promo-color);
+  color: var(--white);
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.new-deal-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--primary-color); /* Dark color for better visibility */
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.promo-card {
+  /* FIX 1: Change background to be more opaque (e.g., 0.8 transparency) */
+  background: rgba(255, 255, 255, 0.8);
+  /* FIX 2: Change text color to the dark secondary color for contrast */
+  color: var(--secondary-color);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Stronger white border */
+  transition: background 0.3s;
+}
+
+.promo-card:hover {
+  /* Slightly less opaque on hover */
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.promo-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color); /* Highlight the header with primary color */
+}
+
+.promo-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.btn-small {
+  padding: 8px 15px;
+  font-size: 0.95rem;
+}
+/* Ensure responsiveness on smaller screens */
+@media (max-width: 900px) {
+  .promo-grid {
+    /* This will automatically stack the cards if minmax(280px) is too wide */
+  }
+}
+
+/* 4.8 Best Services Section  */
+
+.best-services-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  /* 3 columns on large screens */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  transition: box-shadow 0.3s, transform 0.3s;
+  /* Ensures the card content is centered like the image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 250px;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.service-card .icon-large {
+  font-size: 4rem; /* Larger icons */
+  color: var(
+    --secondary-color
+  ); /* Dark color for the icon line drawing effect */
+  margin-bottom: 20px;
+  /* Optional: Add a circle background to mimic the image */
+  /* border: 1px solid var(--border-color);
+    border-radius: 50%;
+    padding: 10px; */
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Mobile Responsiveness: Stacks the cards vertically */
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 4.5 Testimonial Section */
+.testimonial-section {
+  background-color: var(--light-bg);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  /* Arranges cards in columns, wrapping on smaller screens */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
