@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ዳይን ኦንላይን | ይመዝገቡ</title>
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="auth-body">
+    
+    <div class="auth-wrapper">
+        <header class="auth-header">
+            <a href="../../amhIndex.html" class="logo-link">
+                <img src="../../logo.png" alt="ዳይን ኦንላይን አርማ" class="logo-image" />
+                <span class="logo-text">ዳይን ኦንላይን</span>
+            </a>
+            <h1>አካውንት ይፍጠሩ</h1>
+            <p>ፈጣን ትዕዛዝ እና ግላዊ አገልግሎት ለማግኘት ዛሬውኑ ይቀላቀሉን!</p>
+        </header>
+
+        <form class="auth-form" action="your_signup_backend.php" method="POST">
+            
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> ሙሉ ስም</label>
+                <input type="text" id="name" name="name" placeholder="ሙሉ ስምዎን ያስገቡ" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> ኢሜል</label>
+                <input type="email" id="email" name="email" placeholder="እርስዎ@ምሳሌ.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i> የይለፍ ቃል</label>
+                <input type="password" id="password" name="password" placeholder="የይለፍ ቃል ያስገቡ" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm_password"><i class="fas fa-lock-open"></i> የይለፍ ቃል ያረጋግጡ</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="የይለፍ ቃልዎን ያረጋግጡ" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-user-plus"></i> ይመዝገቡ
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            <p>አካውንት አለኝ? <a href="amhSignIn.html">ይግቡ</a></p>
+            <p class="lang-switch-link">
+                <i class="fas fa-language"></i> ወደ <a href="signUp.html">English</a> ይቀይሩ
+            </p>
+            <a href="../../amhIndex.html" class="back-link"><i class="fas fa-arrow-left"></i> ወደ ዋናው ገጽ ይመለሱ</a>
+        </div>
+    </div>
+    
+</body>
+</html>

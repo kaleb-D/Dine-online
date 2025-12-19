@@ -3,22 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signup</title>
+    <title>Dine Online | Sign Up</title>
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-    <h2>Create Account</h2>
-    <a href="index.html">Back to Home page</a>
-    <form action="your_signup_backend.php" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-        <button type="submit">Sign Up</button>
-    </form>
-    <div class="link">
-        <a href="signIn.html">Already have an account?</a>
+<body class="auth-body">
+    
+    <div class="auth-wrapper">
+        <header class="auth-header">
+            <a href="../../index.html" class="logo-link">
+                <img src="../../logo.png" alt="Dine Online Logo" class="logo-image" />
+                <span class="logo-text">Dine Online</span>
+            </a>
+            <h1>Create Account</h1>
+            <p>Join us today to enjoy faster ordering and personalized service!</p>
+        </header>
+
+        <form class="auth-form" action="your_signup_backend.php" method="POST">
+            
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm_password"><i class="fas fa-lock-open"></i> Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-user-plus"></i> Sign Up
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Already have an account? <a href="signIn.html">Sign In</a></p>
+            <p class="lang-switch-link">
+                <i class="fas fa-language"></i> Switch to <a href="amhSignUp.html">Amharic</a>
+            </p>
+            <a href="../../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
     </div>
-</div>
+    
 </body>
 </html>
