@@ -3,66 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dine Online</title>
+    <title>Dine Online | Your Favorite Meals</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <img src="logo.png" alt="Dine Online Logo" />
-        <button onclick="location.href='/signUp.html'">sign up</button>
-        <button onclick="location.href='/signUp.html'">sign in</button>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/menu.html">Menu</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/order.html">order</a></li>
+    
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <img src="/assets/images/Dine-online-Logo.jpeg" alt="Dine Online Logo" class="logo-image" />
+            <span class="logo-text">Dine Online</span>
+        </div>
+       
+
+        <ul class="nav-links">
+            <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/pages/about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="/pages/menu.html"><i class="fas fa-utensils"></i> Menu</a></li>
+            <li><a href="/pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
-        
+
+        <div class="nav-actions">
+            <a href="/pages/order.html" class="cart-icon-link">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+
+            <button class="lang-btn" onclick="location.href ='/amhIndex.html'">Amh</button>
+
+            <div class="auth-buttons">
+                <button class="btn btn-secondary" onclick="location.href='/assets/service/signin.html'">Sign In</button>
+                <button class="btn btn-primary" onclick="location.href='/assets/service/signUp.html'">Sign Up</button>
+            </div>
+             <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+        </div>
     </nav>
-    <header>
-        <h1>Welcome to Dine Online</h1>
-        <p>Your favorite meals delivered to your doorstep.</p>
-        <button onclick="location.href='/menu.html'">Order Now</button>
+    
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Dine Online</h1>
+            <p>Your favorite meals delivered fresh and fast to your doorstep.</p>
+            <button class="btn btn-primary btn-large" onclick="location.href='/pages/menu.html'">
+                Order Now <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="hero-slideshow">
+            
+        </div>
     </header>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Dine Online is committed to bringing you delicious meals from the best local restaurants directly to your home. We prioritize quality, speed, and customer satisfaction.</p>
-    </section>
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-item">
-            <h3>Margherita Pizza</h3>
-            <p>Classic pizza with fresh tomatoes, mozzarella cheese, and basil.</p>
-            <span>$12.99</span>
+    
+    <main>
+        <section id="about" class="content-section about-section">
+            <div class="section-text">
+                <h2>About Us</h2>
+                <p>
+        <strong>Our Mission: Quality and Speed.</strong><br>
+        Dine Online was founded in Addis Ababa to bridge the gap between high-quality restaurant food and fast, reliable delivery. We partner only with the best local kitchens to bring authentic Ethiopian and international cuisine straight to your door.
+    </p>
+    <p>
+        We are committed to exceptional service, fresh ingredients, and ensuring every order arrives hot and on time. We are more than just delivery; we are your local dining solution.
+    </p><br>
+    <a href="pages/about.html" class="btn btn-secondary">Read Our Full Commitment</a>
+</div>
+            <div class="section-image-placeholder">
+                 <i class="fas fa-concierge-bell icon-large"></i>
+            </div>
+        </section>
+
+        <section id="menu" class="content-section menu-preview-section">
+    <h2>Featured Menu Items</h2>
+    <div class="menu-container">
+        
+        <div class="menu-card" data-item-id="M001" data-price="14.99">
+            <div class="card-image-wrapper">
+                <img src="/assets/images/menu/tibs.jpeg" alt="Beef Tibs" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Tibs (Beef Sauté)</h3>
+                <p class="card-description">Tender sautéed beef, seasoned with Awaze and butter, served with Injera.</p>
+                <div class="card-footer">
+                    <span class="card-price">$14.99</span>
+                    <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
         </div>
-        <div class="menu-item">
-            <h3>Caesar Salad</h3>
-            <p>Crisp romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.</p>
-            <span>$8.99</span>
+
+        <div class="menu-card" data-item-id="M002" data-price="12.50">
+            <div class="card-image-wrapper">
+                <img src="/assets/images/menu/beyainet.jpeg" alt="Beyainet" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Beyainet (Veggie Combo)</h3>
+                <p class="card-description">A colorful mix of Misir Wot, Gomen, and Ater Kik Wot on a bed of Injera.</p>
+                <div class="card-footer">
+                    <span class="card-price">$12.50</span>
+                    <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
         </div>
-        <div class="menu-item">
-            <h3>Grilled Chicken Sandwich</h3>
-            <p>Juicy grilled chicken breast with lettuce, tomato, and mayo on a toasted bun.</p>
-            <span>$10.99</span>
+
+        <div class="menu-card" data-item-id="M003" data-price="10.99">
+            <div class="card-image-wrapper">
+                <img src="/assets/images/menu/burger.jpeg" alt="Classic Cheeseburger" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Classic Cheeseburger</h3>
+                <p class="card-description">Juicy beef patty with cheese, fresh vegetables, and our special sauce.</p>
+                <div class="card-footer">
+                    <span class="card-price">$10.99</span>
+                    <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
         </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-            <br />
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-            <br />
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <br />
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <footer>
+        
+        <div class="menu-card" data-item-id="M004" data-price="16.99">
+            <div class="card-image-wrapper">
+                <img src="/assets/images/menu/firfir.jpeg" alt="Quanta Firfir" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Quanta Firfir</h3>
+                <p class="card-description">Dried, seasoned beef jerky mixed with shredded Injera and a savory sauce.</p>
+                <div class="card-footer">
+                    <span class="card-price">$16.99</span>
+                    <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-card" data-item-id="M005" data-price="3.50">
+            <div class="card-image-wrapper">
+                <img src="/assets/images/menu/coffee.jpeg" alt="Ethiopian Coffee" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Ethiopian Coffee (Buna)</h3>
+                <p class="card-description">Freshly roasted and brewed coffee, served traditionally (optional sugar/spice).</p>
+                <div class="card-footer">
+                    <span class="card-price">$3.50</span>
+                    <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-card" data-item-id="M006" data-price="18.00">
+            <div class="card-image-wrapper">
+                <img src="/assets/images/menu/tiresiga.jpeg" alt="Tire Siga" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Tire Siga (Raw Beef)</h3>
+                <p class="card-description">Finely selected, high-quality raw beef served with Awaze and mustard.</p>
+                <div class="card-footer">
+                    <span class="card-price">$18.00</span>
+                    <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="menu-view-all">
+        <button class="btn btn-secondary" onclick="location.href='/pages/menu.html'">View Full Menu</button>
+    </div>
+</section>
+<section class="content-section best-services-section">
+    <h2>Our Best Services</h2>
+    <div class="service-grid">
+        
+        <div class="service-card">
+            <i class="fas fa-hat-chef icon-large"></i>
+            <h3>Best Chef</h3>
+            <p>We partner with top-rated local restaurants and chefs to ensure every dish meets gourmet standards.</p>
+        </div>
+        
+        <div class="service-card">
+            <i class="fas fa-salad icon-large"></i>
+            <h3>Quality Food</h3>
+            <p>We are committed to using only the freshest, locally sourced ingredients for every meal prepared.</p>
+        </div>
+        
+        <div class="service-card">
+            <i class="fas fa-route icon-large"></i>
+            <h3>Perfect Delivery</h3>
+            <p>Our optimized routing ensures your food is perfectly cooked and delivered hot and fast to your door.</p>
+        </div>
+        
+    </div>
+    <div class="text-center" style="margin-top: 40px;">
+        <a href="pages/menu.html" class="btn btn-primary btn-large">Start Your Order</a>
+    </div>
+</section>
+        <section class="content-section testimonial-section">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-grid">
+        
+        <blockquote class="testimonial-card">
+            <p>"The fastest delivery I've ever experienced in the city! The lasagna was still piping hot. Highly recommend their service."</p>
+            <footer>— Helen G., Bole</footer>
+        </blockquote>
+        
+        <blockquote class="testimonial-card">
+            <p>"I love the Amharic interface. It makes ordering for my family so much easier. The Injera and Doro Wet are authentic and delicious."</p>
+            <footer>— Samuel T., Gerji</footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+            <p>"They have a fantastic selection of local restaurants. The quality is consistently excellent."</p>
+            <footer>— Fatema A., Mexico</footer>
+        </blockquote>
+    </div>
+
+    <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<section class="content-section new-deal-section promo-bg-section">
+    <h2>🔥 Today's Hottest Deals 🔥</h2>
+    
+    <div class="promo-grid">
+        
+        <div class="promo-card">
+            <h3>New Customer Special!</h3>
+            <p>Sign up now and get <strong>15% OFF</strong> your entire first order. Use code: NEW15</p>
+            <a href="pages/menu.html" class="btn btn-primary btn-small">Order Now</a>
+        </div>
+
+        <div class="promo-card">
+            <h3>Lunch Time Special</h3>
+            <p>Free soft drink with any main dish order between 11 AM - 2 PM, Monday to Friday.</p>
+            <a href="pages/menu.html" class="btn btn-primary btn-small">See Lunch Menu</a>
+        </div>
+
+        <div class="promo-card">
+            <h3>Weekend Family Feast</h3>
+            <p>Buy 2 Pizzas and get a third one 50% OFF. Perfect for sharing!</p>
+            <a href="pages/menu.html" class="btn btn-primary btn-small">View Deals</a>
+        </div>
+
+    </div>
+</section>
+        <section id="contact" class="content-section contact-section">
+            <h2>Get in Touch</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name:</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-at"></i> Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+        </section>
+        
+    </main>
+    
+    <footer class="site-footer">
         <p>&copy; 2024 Dine Online. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 </body>
 </html>

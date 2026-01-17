@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ዳይን ኦንላይን | ይግቡ</title>
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="auth-body">
+    
+    <div class="auth-wrapper">
+        <header class="auth-header">
+            <a href="../../amhIndex.html" class="logo-link">
+                <img src="../../logo.png" alt="ዳይን ኦንላይን አርማ" class="logo-image" />
+                <span class="logo-text">ዳይን ኦንላይን</span>
+            </a>
+            <h1>ይግቡ</h1>
+            <p>እንኳን ደህና መጡ! ለመቀጠል እባክዎ የመለያ መረጃዎን ያስገቡ።</p>
+        </header>
+
+        <form class="auth-form" action="your_login_backend.php" method="POST">
+            
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> ኢሜል</label>
+                <input type="email" id="email" name="email" placeholder="እርስዎ@ምሳሌ.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i> የይለፍ ቃል</label>
+                <input type="password" id="password" name="password" placeholder="የይለፍ ቃልዎን ያስገቡ" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-sign-in-alt"></i> ይግቡ
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            <p>መለያ የለዎትም? <a href="amhSignUp.html">አካውንት ይፍጠሩ</a></p>
+            <p class="lang-switch-link">
+                <i class="fas fa-language"></i> ወደ <a href="signIn.html">English</a> ይቀይሩ
+            </p>
+            <a href="../../amhIndex.html" class="back-link"><i class="fas fa-arrow-left"></i> ወደ ዋናው ገጽ ይመለሱ</a>
+        </div>
+    </div>
+    
+</body>
+</html>
