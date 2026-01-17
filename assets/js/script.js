@@ -126,3 +126,145 @@ function changeLanguage(lang) {
 
     if (typeof renderOrderPage === "function") renderOrderPage();
 }
+/* 
+   3. CART CORE LOGIC
+ */
+let cart = JSON.parse(localStorage.getItem('dine_cart'))  ||[];
+
+function saveCart() {
+    localStorage.setItem('dine_cart', JSON.stringify(cart));
+    updateCartCount();
+}
+
+function updateCartCount() {
+    const countEl = document.querySelector('.cart-count');
+    if (countEl) {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        countEl.textContent = totalItems;
+    }
+}
+
+function addToCart(name, price) {
+    const existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ name, price, quantity: 1 });
+    }
+    saveCart();
+    alert(name + " added to cart!");
+}
+
+/* 
+   4. RENDER ORDER PAGE
+ */
+function renderOrderPage() {
+    const container = document.getElementById('cart-items-container');
+    const totalEl = document.getElementById('order-total-amount');
+    if (!container) return;
+
+    const lang = localStorage.getItem('preferred_lang')  ||'en';
+    container.innerHTML = '';
+
+    if (cart.length === 0) {
+        container.innerHTML = <tr><td colspan="5" style="text-align:center; padding:20px;">${translations[lang]['empty-msg']}</td></tr>;
+        if (totalEl) totalEl.textContent = "0.00";
+        return;
+    }
+
+    let total = 0;
+    cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        container.innerHTML += `
+            <tr>
+                <td>${item.name}</td>
+                <td>ETB ${item.price}</td>
+                <td>
+                    <div class="qty-controls">
+                        <button onclick="changeQty(${index}, -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="changeQty(${index}, 1)">+</button>
+                    </div>
+                </td>
+                <td>ETB ${itemTotal.toFixed(2)}</td>
+                <td><button onclick="removeItem(${index})"><i class="fas fa-trash"></i></button></td>
+            </tr>`;
+    });
+    if (totalEl) totalEl.textContent = total.toFixed(2);
+}
+
+function changeQty(index, delta) {
+    cart[index].quantity += delta;
+    if (cart[index].quantity <= 0) cart.splice(index, 1);
+    saveCart();
+    renderOrderPage();
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    saveCart();
+    renderOrderPage();
+}
+
+function clearCart() {
+    const lang = localStorage.getItem('preferred_lang')  ||'en';
+    if (confirm(translations[lang]['confirm-clear'])) {
+        cart = [];
+        saveCart();
+        renderOrderPage();
+    }
+}
+
+
+function submitOrder(event) {
+    event.preventDefault();
+    const lang = localStorage.getItem('preferred_lang')  ||'en';
+    
+    if (cart.length === 0) {
+        alert(translations[lang]['empty-msg']);
+        return;
+    }
+
+    const name = document.getElementById('cust-name').value;
+    const phone = document.getElementById('cust-phone').value;
+    const address = document.getElementById('cust-address').value;
+    const total = document.getElementById('order-total-amount').textContent;
+
+    let orderDetails = cart.map(item => `${item.name} x${item.quantity} - ETB ${item.price * item.quantity}`).join('%0D%0A');
+
+    const mailtoLink = `mailto:kaleb.dereje.0123@gmail.com?subject=New Order - ${name}&body=Customer: ${name}%0D%0APhone: ${phone}%0D%0AAddress: ${address}%0D%0A%0D%0AOrder:%0D%0A${orderDetails}%0D%0A%0D%0ATotal: ETB ${total}`;
+
+    window.location.href = mailtoLink;
+    
+    
+    cart = [];
+    localStorage.removeItem('dine_cart');
+
+    setTimeout(() => {
+        window.location.href = (lang === 'am') ? "../assets/service/thankyou-am.html" : "../assets/service/thankyou.html";
+    }, 800);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Language Init
+    const savedLang = localStorage.getItem('preferred_lang') || 'en';
+    changeLanguage(savedLang);
+
+    // UI Init
+    updateCartCount();
+    renderOrderPage();
+
+// Mobile Menu Toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+});
