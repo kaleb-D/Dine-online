@@ -107,3 +107,22 @@ const translations = {
     }
 };
 
+/*  LANGUAGE LOGIC*/
+function changeLanguage(lang) {
+    localStorage.setItem('preferred_lang', lang);
+    document.documentElement.lang = lang;
+
+    // Update all text elements
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) el.textContent = translations[lang][key];
+    });
+
+    // Update all navigation links
+    document.querySelectorAll('[data-i18n-link]').forEach(el => {
+        const key = el.getAttribute('data-i18n-link');
+        if (translations[lang][key]) el.setAttribute('href', translations[lang][key]);
+    });
+
+    if (typeof renderOrderPage === "function") renderOrderPage();
+}
