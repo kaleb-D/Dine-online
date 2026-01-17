@@ -49,3 +49,61 @@ function initMenu() {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    initMenu();
+
+});
+
+// Translation dictionary
+
+const translations = {
+    en: {
+        // Navigation
+        "nav-home": "Home", "nav-about": "About", "nav-menu": "Menu", "nav-contact": "Contact", "nav-order": "Order",
+        "nav-home-link": "../index.html", "nav-about-link": "about.html", "nav-menu-link": "menu.html", "nav-contact-link": "contact.html", "nav-order-link": "order.html",
+        // Order Page Content
+        "hero-title": "Review Your Order and Checkout",
+        "hero-desc": "Please review your selections before completing your purchase.",
+        "cart-title": "Your Cart Items", "th-item": "Item", "th-price": "Price", "th-qty": "Qty", "th-total": "Total",
+        "btn-clear": "Clear Cart", "subtotal": "Subtotal:", "vat-note": "Prices include VAT where applicable.",
+        "delivery-title": "Delivery Details", "lbl-name": "Name", "lbl-phone": "Phone Number", "lbl-address": "Delivery Address", "btn-complete": "Complete Order",
+        // Thank You Page Content
+        "thank-title": "Thank You for Your Order!",
+        "thank-msg": "Your order has been received. A confirmation will be sent to your email shortly.",
+        "motto": "“Traditional Taste, Modern Speed.”",
+        "next-steps-title": "What Happens Next?",
+        "next-steps-desc": "Our kitchen is preparing your meal. Stay tuned for a confirmation call or email!",
+        "btn-back-home": "Back to Homepage",
+        // System Messages
+        "empty-msg": "Your cart is empty.",
+        "confirm-clear": "Are you sure you want to clear the cart?",
+        "msg-success": "Order details prepared! Opening email app...",
+        
+
+    },
+    am: {
+        // Navigation
+        "nav-home": "መነሻ", "nav-about": "ስለ እኛ", "nav-menu": "ዝርዝር ምግብ", "nav-contact": "አግኙን", "nav-order": "ትዕዛዝ",
+        "nav-home-link": "../index_am.html", "nav-about-link": "about_am.html", "nav-menu-link": "menu_am.html", "nav-contact-link": "contact_am.html", "nav-order-link": "order_am.html",
+        // Order Page Content
+        "hero-title": "ትዕዛዝዎን ይከልሱ እና ይክፈሉ",
+        "hero-desc": "እባክዎ ከመክፈልዎ በፊት ትዕዛዝዎን ያረጋግጡ።",
+        "cart-title": "የትዕዛዝዎ ዝርዝር", "th-item": "ምግብ", "th-price": "ዋጋ", "th-qty": "ብዛት", "th-total": "ጠቅላላ",
+        "btn-clear": "ሁሉንም ሰርዝ", "subtotal": "ድምር:", "vat-note": "ዋጋዎች የተጨማሪ እሴት ታክስን ያካትታሉ።",
+        "delivery-title": "የማድረሻ መረጃ", "lbl-name": "ሙሉ ስም", "lbl-phone": "ስልክ ቁጥር", "lbl-address": "የማድረሻ አድራሻ", "btn-complete": "ትዕዛዙን ጨርስ",
+        // Thank You Page Content
+        "thank-title": "ስለ ትዕዛዝዎ እናመሰግናለን!",
+        "thank-msg": "ትዕዛዝዎ ደርሶናል። በቅርቡ በኢሜልዎ ማረጋገጫ ይላክለታል።",
+        "motto": "“የባህል ጣዕም፣ የዘመነ ፍጥነት።”",
+        "next-steps-title": "ቀጥሎ ምን ይከሰታል?",
+        "next-steps-desc": "ምግብዎን እያዘጋጀን ነው። ለበለጠ መረጃ በስልክ ቁጥርዎ እንደውላለን!",
+        "btn-back-home": "ወደ መነሻ ገጽ ተመለስ",
+        // System Messages
+        "empty-msg": "ትዕዛዝዎ ባዶ ነው።",
+        "confirm-clear": "እርግጠኛ ነዎት ሁሉንም መሰረዝ ይፈልጋሉ?",
+        "msg-success": "ትዕዛዝዎ ተዘጋጅቷል! የኢሜል መተግበሪያ በመከፈት ላይ ነው...",
+       
+    }
+};
+
