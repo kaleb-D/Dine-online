@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine Online | Thank You</title>
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="../js/script.js" defer></script> 
+</head>
+<body class="thank-you-body">
+    
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <img src="../../logo.png" alt="Logo" class="logo-image" />
+            <span class="logo-text">Dine Online</span>
+        </div>
+        <div class="nav-actions">
+            <button class="btn-lang" onclick="changeLanguage('en')">EN</button> | 
+            <button class="btn-lang" onclick="changeLanguage('am')">አማ</button>
+        </div>
+    </nav>
+    
+    <main class="checkout-container">
+        <div class="checkout-status-card">
+            <div class="success-icon">
+                <i class="fas fa-check-circle" style="font-size: 4rem; color: #27ae60;"></i>
+            </div>
+            <h2 data-i18n="thank-title">Thank You for Your Order!</h2>
+            <p data-i18n="thank-msg">Your order has been received. Please check your email  to ensure the message was sent.</p>
+            
+            <div class="motto-box" style="margin-top: 20px; font-style: italic; color: #555;">
+                <h4 data-i18n="motto">"Great Food, Delivered Fast."</h4>
+            </div>
+        </div>
+
+        <section class="checkout-summary-section">
+            <div class="summary-details text-center">
+                <h3 data-i18n="next-steps-title"><i class="fas fa-info-circle"></i> What Happens Next?</h3>
+                <p data-i18n="next-steps-desc">Our team is reviewing your order. We will contact you via the phone number provided if we need more details.</p>
+            </div>
+        </section>
+        
+        <div class="checkout-actions">
+            <a href="../../index.html" class="btn btn-primary btn-large" >
+                <i class="fas fa-home"></i> <span data-i18n="btn-back-home">Back to Homepage</span>
+            </a> 
+        </div>
+
+    </main>
+    
+    <footer class="site-footer">
+        <p>&copy; 2024 Dine Online. <span data-i18n="footer-rights">All rights reserved.</span></p>
+    </footer>
+</body>
+</html>

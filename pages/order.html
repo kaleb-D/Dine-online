@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dine Online | Order</title>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="../assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="nav-logo">
+        <img
+          src="/assets/images/Dine-online-Logo.jpeg"
+          alt="Dine Online Logo"
+          class="logo-image"
+        />
+        <span class="logo-text">Dine Online</span>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="/pages/about.html"
+            ><i class="fas fa-info-circle"></i> About</a
+          >
+        </li>
+        <li>
+          <a href="/pages/menu.html"><i class="fas fa-utensils"></i> Menu</a>
+        </li>
+        <li>
+          <a href="/pages/contact.html"
+            ><i class="fas fa-envelope"></i> Contact</a
+          >
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="/pages/order.html" class="cart-icon-link">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+
+        <button class="lang-btn" onclick="location.href = '/amhIndex.html'">
+          Amh
+        </button>
+
+        <div class="auth-buttons">
+          <button
+            class="btn btn-secondary"
+            onclick="location.href = '/assets/service/signin.html'"
+          >
+            Sign In
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="location.href = '/assets/service/signUp.html'"
+          >
+            Sign Up
+          </button>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header class="page-hero-section">
+        <h1 data-i18n="hero-title">Review Your Order and Checkout</h1>
+        <p data-i18n="hero-desc">
+          Please review your selections before completing your purchase.
+        </p>
+      </header>
+
+      <section class="content-section order-page-grid">
+        <div class="cart-summary-wrapper">
+          <h2 data-i18n="cart-title">
+            <i class="fas fa-list-alt"></i> Your Cart Items
+          </h2>
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th data-i18n="th-item">Item</th>
+                <th data-i18n="th-price">Price</th>
+                <th data-i18n="th-qty">Qty</th>
+                <th data-i18n="th-total">Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cart-items-container"></tbody>
+          </table>
+
+          <button class="btn btn-secondary" onclick="clearCart()">
+            <i class="fas fa-trash-alt"></i>
+            <span data-i18n="btn-clear">Clear Cart</span>
+          </button>
+
+          <div class="cart-totals-display">
+            <div class="total-line grand-total">
+              <strong data-i18n="subtotal">Subtotal:</strong>
+              <strong>ETB <span id="order-total-amount">0.00</span></strong>
+            </div>
+          </div>
+          <p class="order-note">
+            <i class="fas fa-info-circle"></i>
+            <span data-i18n="vat-note">Prices include VAT.</span>
+          </p>
+        </div>
+
+        <div class="checkout-form-wrapper">
+          <h2 data-i18n="delivery-title">
+            <i class="fas fa-truck"></i> Delivery Details
+          </h2>
+          <form class="checkout-form" onsubmit="submitOrder(event)">
+            <div class="form-group">
+              <label data-i18n="lbl-name">Name</label>
+              <input type="text" id="cust-name" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="lbl-phone">Phone Number</label>
+              <input type="tel" id="cust-phone" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="lbl-address">Delivery Address</label>
+              <textarea id="cust-address" rows="3" required></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-large checkout-btn"
+            >
+              <i class="fas fa-credit-card"></i>
+              <span data-i18n="btn-complete">Complete Order</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+      <p>&copy; 2024 Dine Online. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

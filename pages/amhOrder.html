@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="am">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dine Online | ትዕዛዝዎ</title>
+
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="../assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="nav-logo">
+        <img
+          src="/assets/images/Dine-online-Logo.jpeg"
+          alt="ዳይን ኦንላይን አርማ"
+          class="logo-image"
+        />
+        <span class="logo-text">ዳይን ኦንላይን</span>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="../amhIndex.html"><i class="fas fa-home"></i> ዋና ገጽ</a>
+        </li>
+        <li>
+          <a href="/pages/amhAbout.html"
+            ><i class="fas fa-info-circle"></i> ስለ እኛ</a
+          >
+        </li>
+        <li>
+          <a href="/pages/menuAmh.html"
+            ><i class="fas fa-utensils"></i> ምግብ ዝርዝር</a
+          >
+        </li>
+        <li>
+          <a href="/pages/AmhContact.html"
+            ><i class="fas fa-envelope"></i> አግኙን</a
+          >
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="/pages/amhOrder.html" class="cart-icon-link">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+
+        <button class="lang-btn" onclick="location.href = '/index.html'">
+          Eng
+        </button>
+
+        <div class="auth-buttons">
+          <button
+            class="btn btn-secondary"
+            onclick="location.href = '/assets/service/amhSignIn.html'"
+          >
+            ይግቡ
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="location.href = '/assets/service/amhSignUp.html'"
+          >
+            ይመዝገቡ
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header class="page-hero-section">
+        <h1>ትዕዛዝዎን ይከልሱ እና ይክፈሉ</h1>
+        <p>እባክዎ ከመክፈልዎ በፊት የመረጧቸውን ምግቦች ትክክለኛነት ያረጋግጡ።</p>
+      </header>
+
+      <section class="content-section order-page-grid">
+        <div class="cart-summary-wrapper">
+          <h2><i class="fas fa-list-alt"></i> የትዕዛዝዎ ዝርዝር</h2>
+
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>ምግብ</th>
+                <th>ዋጋ</th>
+                <th>ብዛት</th>
+                <th>ጠቅላላ</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody id="cart-items-container"></tbody>
+          </table>
+
+          <div class="cart-actions">
+            <button
+              class="btn btn-secondary"
+              onclick="clearCart()"
+              style="margin-top: 15px"
+            >
+              <i class="fas fa-trash-alt"></i> ትዕዛዙን ሰርዝ
+            </button>
+          </div>
+
+          <div class="cart-totals-display">
+            <div class="total-line grand-total">
+              <strong>ድምር:</strong>
+              <strong>ETB <span id="order-total-amount">0.00</span></strong>
+            </div>
+          </div>
+
+          <p class="order-note">
+            <i class="fas fa-info-circle"></i>
+            ዋጋዎች የተጨማሪ እሴት ታክስን (VAT) ያካትታሉ።
+          </p>
+        </div>
+
+        <div class="checkout-form-wrapper">
+          <h2><i class="fas fa-truck"></i> የማድረሻ መረጃ</h2>
+
+          <form class="checkout-form" onsubmit="submitOrder(event)">
+            <div class="form-group">
+              <label>ሙሉ ስም</label>
+              <input
+                type="text"
+                id="cust-name"
+                placeholder="ስምዎን እዚህ ያስገቡ"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label>ስልክ ቁጥር</label>
+              <input type="tel" id="cust-phone" placeholder="09..." required />
+            </div>
+
+            <div class="form-group">
+              <label>የማድረሻ አድራሻ</label>
+              <textarea
+                id="cust-address"
+                rows="3"
+                placeholder="ክፍለ ከተማ፣ ወረዳ፣ የቤት ቁጥር..."
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-large checkout-btn"
+            >
+              <i class="fas fa-credit-card"></i> ትዕዛዙን ጨርስ
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <div class="text-center">
+        <a href="menu.html" class="btn btn-secondary back-to-menu-btn">
+          <i class="fas fa-arrow-left"></i> ወደ ዝርዝር ምግብ ይመለሱ
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2024 Dine Online። መብቱ በህግ የተጠበቀ ነው።</p>
+    </footer>
+  </body>
+</html>

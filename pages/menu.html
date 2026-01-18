@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dine Online | Full Menu</title>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="nav-logo">
+        <img
+          src="/assets/images/Dine-online-Logo.jpeg"
+          alt="Dine Online Logo"
+          class="logo-image"
+        />
+        <span class="logo-text">Dine Online</span>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="/pages/about.html"
+            ><i class="fas fa-info-circle"></i> About</a
+          >
+        </li>
+        <li>
+          <a href="/pages/menu.html"><i class="fas fa-utensils"></i> Menu</a>
+        </li>
+        <li>
+          <a href="/pages/contact.html"
+            ><i class="fas fa-envelope"></i> Contact</a
+          >
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="/pages/order.html" class="cart-icon-link">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+
+        <button class="lang-btn" onclick="location.href = '/amhIndex.html'">
+          Amh
+        </button>
+
+        <div class="auth-buttons">
+          <button
+            class="btn btn-secondary"
+            onclick="location.href = '/assets/service/signin.html'"
+          >
+            Sign In
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="location.href = '/assets/service/signUp.html'"
+          >
+            Sign Up
+          </button>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-hero-section content-section menu-hero">
+      <h1>Our Full Menu: Flavor & Nutrition</h1>
+      <p>
+        Explore our carefully crafted dishes, from authentic Ethiopian classics
+        to popular international selections. Customization available on all
+        items!
+      </p>
+    </section>
+
+    <section class="content-section menu-filter-section">
+      <div class="category-filter">
+        <button class="filter-btn active" data-category="all">All Items</button>
+        <button class="filter-btn" data-category="ethiopian">
+          <i class="fas fa-utensils"></i> Ethiopian Cuisine
+        </button>
+        <button class="filter-btn" data-category="international">
+          <i class="fas fa-globe"></i> International Dishes
+        </button>
+        <button class="filter-btn" data-category="burgers">
+          <i class="fas fa-hamburger"></i> Burgers & Sandwiches
+        </button>
+        <button class="filter-btn" data-category="pizza">
+          <i class="fas fa-pizza-slice"></i> Pizza
+        </button>
+        <button class="filter-btn" data-category="drinks">
+          <i class="fas fa-mug-hot"></i> Drinks
+        </button>
+      </div>
+    </section>
+
+    <section class="content-section menu-grid-section">
+      <div class="menu-grid">
+        <div
+          class="menu-item-card"
+          data-category="ethiopian"
+          data-nutrition='{"P":"30%", "C":"45%", "F":"25%"}'
+        >
+          <img
+            src="../assets/images/menu/Doro Wat (Ethiopian Chicken Stew).jpeg"
+            alt="Doro Wot"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Doro Wot</h4>
+            <p class="item-description">
+              Spicy chicken stew slow-cooked in berbere spice, served with a
+              hard-boiled egg and cottage cheese (Ayib).
+            </p>
+            <span class="item-price">ETB 280</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Doro Wot (ዶሮ ወጥ)', 280)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="ethiopian"
+          data-nutrition='{"P":"20%", "C":"55%", "F":"20%"}'
+        >
+          <img
+            src="../assets/images/menu/Ethiopian Food, Part 3_ Mesir Wat.jpeg"
+            alt="Key Misir Wot"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Key Misir Wot (ቀይ ምስር)</h4>
+            <p class="item-description">
+              Red lentil stew simmered in a rich, mild Ethiopian spice blend.
+              Great source of plant-based protein.
+            </p>
+            <span class="item-price">ETB 180</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Key Misir Wot (ቀይ ምስር)', 180)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="ethiopian"
+          data-nutrition='{"P":"15%", "C":"60%", "F":"15%"}'
+        >
+          <img
+            src="../assets/images/menu/beyainet.jpeg"
+            alt="Beyaynetu"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Beyaynetu (በያይነቱ)</h4>
+            <p class="item-description">
+              Sampler platter of various vegetarian wots (stews), typically
+              including Gomen, Ater Kik, and Tikil Gomen.
+            </p>
+            <span class="item-price">ETB 320</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Beyaynetu (በያይነቱ)', 320)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="ethiopian"
+          data-nutrition='{"P":"35%", "C":"10%", "F":"50%"}'
+        >
+          <img
+            src="../assets/images/menu/Voyage en Ethiopie.jpeg"
+            alt="Kitfo"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Kitfo (ክትፎ)</h4>
+            <p class="item-description">
+              Finely minced lean beef, seasoned with mitmita and clarified
+              butter (niter kibbeh). Available raw or lightly cooked (leb leb).
+            </p>
+            <span class="item-price">ETB 450</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Kitfo (ክትፎ)', 450)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="ethiopian"
+          data-nutrition='{"P":"40%", "C":"15%", "F":"40%"}'
+        >
+          <img
+            src="../assets/images/menu/tibs.jpeg"
+            alt="Tibs"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Beef Tibs (ጥብስ)</h4>
+            <p class="item-description">
+              Stir-fried strips of beef or lamb sautéed with butter, garlic,
+              onions, and jalapeños. Served hot.
+            </p>
+            <span class="item-price">ETB 350</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Beef Tibs (ጥብስ)', 350)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="international"
+          data-nutrition='{"P":"40%", "C":"30%", "F":"25%"}'
+        >
+          <img
+            src="../assets/images/menu/Grilled Chicken Salad.jpeg"
+            alt="Grilled Chicken Salad"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>High-Protein Grilled Chicken Salad</h4>
+            <p class="item-description">
+              Lean grilled chicken breast over fresh mixed greens, cucumber,
+              tomatoes, and a light vinaigrette dressing.
+            </p>
+            <span class="item-price">ETB 300</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('High-Protein Grilled Chicken Salad', 250)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="international"
+          data-nutrition='{"P":"15%", "C":"65%", "F":"15%"}'
+        >
+          <img
+            src="../assets/images/menu/Creamy Vegetable Pasta (Vegan!).jpeg"
+            alt="Vegetable Pasta"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Creamy Vegetable Pasta (V)</h4>
+            <p class="item-description">
+              Fettuccine pasta tossed in a light cream sauce with seasonal
+              roasted vegetables (broccoli, bell peppers, zucchini).
+            </p>
+            <span class="item-price">ETB 250</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Creamy Vegetable Pasta ', 250)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="international"
+          data-nutrition='{"P":"45%", "C":"5%", "F":"45%"}'
+        >
+          <img
+            src="../assets/images/menu/Baked Salmon Fillets.jpeg"
+            alt="Salmon Fillet"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Baked Salmon Fillet</h4>
+            <p class="item-description">
+              High-omega 3 salmon fillet baked with lemon and herbs. Served with
+              a side of steamed asparagus and mashed potatoes.
+            </p>
+            <span class="item-price">ETB 650</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Baked Salmon Fillet', 650)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="international"
+          data-nutrition='{"P":"30%", "C":"50%", "F":"20%"}'
+        >
+          <img
+            src="../assets/images/menu/Chicken with Mixed Vegetable Stir Fry - recipebysara.jpeg"
+            alt="Chicken Stir Fry"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Chicken and Veggie Stir Fry</h4>
+            <p class="item-description">
+              Wok-tossed chicken strips, bell peppers, carrots, and onions in a
+              savory ginger sauce, served over brown rice.
+            </p>
+            <span class="item-price">ETB 320</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Chicken and Veggie Stir Fry', 320)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="international"
+          data-nutrition='{"P":"25%", "C":"50%", "F":"25%"}'
+        >
+          <img
+            src="../assets/images/menu/Hearty & Classic Beef Lasagna Recipe for the Ultimate Comfort Food Experience.jpeg"
+            alt="Beef Lasagna"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Classic Beef Lasagna</h4>
+            <p class="item-description">
+              Layers of pasta, seasoned beef ragu, ricotta, and mozzarella baked
+              to perfection. A hearty comfort food.
+            </p>
+            <span class="item-price">ETB 380</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Classic Beef Lasagna', 380)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="pizza"
+          data-nutrition='{"P":"18%", "C":"55%", "F":"27%"}'
+        >
+          <img
+            src="../assets/images/menu/Classic Margherita Pizza.jpeg"
+            alt="Margherita Pizza"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Classic Margherita Pizza</h4>
+            <p class="item-description">
+              Tomato sauce, fresh mozzarella cheese, and basil leaves on a thin,
+              wood-fired crust.
+            </p>
+            <span class="item-price">ETB 450</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Classic Margherita Pizza', 450)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="pizza"
+          data-nutrition='{"P":"25%", "C":"45%", "F":"30%"}'
+        >
+          <img
+            src="../assets/images/menu/Spicy Pepperoni Pizza.jpeg"
+            alt="Pepperoni Pizza"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Spicy Pepperoni Pizza</h4>
+            <p class="item-description">
+              Classic tomato sauce, mozzarella, and generous slices of spicy
+              pepperoni.
+            </p>
+            <span class="item-price">ETB 550</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Spicy Pepperoni Pizza', 550)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="pizza"
+          data-nutrition='{"P":"15%", "C":"60%", "F":"20%"}'
+        >
+          <img
+            src="../assets/images/menu/Spicy Veggie Delight Pizza.jpeg"
+            alt="Veggie Delight Pizza"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Veggie Delight Pizza (V)</h4>
+            <p class="item-description">
+              Topped with mushrooms, olives, bell peppers, and onions.
+            </p>
+            <span class="item-price">ETB 480</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Veggie Delight Pizza', 480)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="burgers"
+          data-nutrition='{"P":"30%", "C":"45%", "F":"25%"}'
+        >
+          <img
+            src="../assets/images/menu/burger.jpeg"
+            alt="Classic Burger"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Dine Classic Beef Burger</h4>
+            <p class="item-description">
+              1/3lb seasoned beef patty, lettuce, tomato, onions, and our
+              signature sauce on a toasted bun.
+            </p>
+            <span class="item-price">ETB 270</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Dine Classic Beef Burger', 270)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="burgers"
+          data-nutrition='{"P":"35%", "C":"40%", "F":"25%"}'
+        >
+          <img
+            src="../assets/images/menu/Spicy Hot Honey Crispy Chicken Sandwich.jpeg"
+            alt="Chicken Sandwich"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Spicy Crispy Chicken Sandwich</h4>
+            <p class="item-description">
+              Marinated crispy chicken fillet with spicy mayo and pickles,
+              served on a brioche bun.
+            </p>
+            <span class="item-price">ETB 290</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Spicy Crispy Chicken Sandwich', 290)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div
+          class="menu-item-card"
+          data-category="burgers"
+          data-nutrition='{"P":"20%", "C":"55%", "F":"20%"}'
+        >
+          <img
+            src="../assets/images/menu/Black Bean Burger.jpeg"
+            alt="Veggie Burger"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Black Bean Veggie Burger (V)</h4>
+            <p class="item-description">
+              Homemade black bean patty with avocado and chipotle sauce for a
+              delicious, meatless option.
+            </p>
+            <span class="item-price">ETB 240</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Black Bean Veggie Burger', 240)"
+            >
+              Customize & Add
+            </button>
+          </div>
+          <div class="nutrition-overlay"></div>
+        </div>
+
+        <div class="menu-item-card drink-item" data-category="drinks">
+          <img
+            src="../assets/images/menu/Drink and Liquid Photography _ Commercial Drink Photographers.jpeg"
+            alt="Coca-Cola"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Coca-Cola (300ml)</h4>
+            <p class="item-description">A classic cold soft drink.</p>
+            <span class="item-price">ETB 30</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Coca-Cola (300ml)', 30)"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-item-card drink-item" data-category="drinks">
+          <img
+            src="../assets/images/menu/Fanta's Clever New Bottle Looks Fresh Squeezed, and Was Brutal to Design.jpeg"
+            alt="Fanta Orange"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Fanta Orange</h4>
+            <p class="item-description">Refreshing orange-flavored soda.</p>
+            <span class="item-price">ETB 30</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Fanta Orange', 30)"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-item-card drink-item" data-category="drinks">
+          <img
+            src="../assets/images/menu/Traditional Espresso Macchiato - The Littlest Crumb.jpeg"
+            alt="Macchiato"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Traditional Macchiato</h4>
+            <p class="item-description">
+              Strong espresso with a dash of foamed milk.
+            </p>
+            <span class="item-price">ETB 45</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Traditional Macchiato', 45)"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-item-card drink-item" data-category="drinks">
+          <img
+            src="../assets/images/menu/How to Make Authentic Masala Chai at Home_ A Spiced Indian Tea Recipe.jpeg"
+            alt="Spiced Tea"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Spiced Tea (Sha'i buna)</h4>
+            <p class="item-description">
+              Local black tea blended with warm spices like cinnamon and
+              cardamom.
+            </p>
+            <span class="item-price">ETB 35</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Spiced Tea (Shai buna)', 35)"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-item-card drink-item" data-category="drinks">
+          <img
+            src="../assets/images/menu/Americano.jpeg"
+            alt="Americano"
+            class="item-image"
+          />
+          <div class="item-details">
+            <h4>Americano (Hot/Iced)</h4>
+            <p class="item-description">
+              Espresso diluted with hot water. Specify hot or iced.
+            </p>
+            <span class="item-price">ETB 40</span>
+            <button
+              class="btn btn-secondary"
+              onclick="addToCart('Americano (Hot/Iced)', 40)"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; 2024 Dine Online. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
