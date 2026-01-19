@@ -8,6 +8,7 @@ The project focuses on clean UI, structured navigation, and accessibility for us
 ## 📌 Features
 
 - 🌐 Responsive restaurant website
+- 🗣 Local Language Support
 - 📖 Menu and service pages
 - 🌍 Multi‑page navigation
 - 🔍 SEO support (`robots.txt`, `sitemap.xml`)
@@ -60,12 +61,12 @@ _No server setup required._
 
 ## 👥 Contributors
 
--Firaol Gula
--Kaleb Dereje
--Fikremariam Debela
--Fitsum Mulugeta
--Firaol Bashada
--Kidus Bafena
+- Firaol Gula
+- Kaleb Dereje
+- Fikremariam Debela
+- Fitsum Mulugeta
+- Firaol Bashada
+- Kidus Bafena
 
 ---
 
