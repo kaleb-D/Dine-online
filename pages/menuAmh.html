@@ -1,299 +1,637 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="amh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ዳይን ኦንላይን | ሙሉ ምናሌ</title>
-    <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
-    
-     <nav class="main-nav">
-        <div class="nav-logo">
-            <img src="../assets/images/Dine-online-Logo.jpeg" alt="ዳይን ኦንላይን አርማ" class="logo-image" />
-            <span class="logo-text">ዳይን ኦንላይን</span>
-        </div>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="nav-logo">
+        <img
+          src="/assets/images/Dine-online-Logo.jpeg"
+          alt="ዳይን ኦንላይን አርማ"
+          class="logo-image"
+        />
+        <span class="logo-text">ዳይን ኦንላይን</span>
+      </div>
 
-        <ul class="nav-links">
-            <li><a href="../amhIndex.html"><i class="fas fa-home"></i> ዋና ገጽ</a></li>
-            <li><a href="/pages/amhAbout.html"><i class="fas fa-info-circle"></i> ስለ እኛ</a></li>
-            <li><a href="menuAmh.html"><i class="fas fa-utensils"></i> ምግብ ዝርዝር</a></li>
-            <li class="active"><a href="AmhContact.html"><i class="fas fa-envelope"></i> አግኙን</a></li>
-            
-        </ul>
-        <div class="nav-actions">
-            <a href="/pages/order.html" class="cart-icon-link">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
+      <ul class="nav-links">
+        <li>
+          <a href="../amhIndex.html"><i class="fas fa-home"></i> ዋና ገጽ</a>
+        </li>
+        <li>
+          <a href="/pages/amhAbout.html"
+            ><i class="fas fa-info-circle"></i> ስለ እኛ</a
+          >
+        </li>
+        <li>
+          <a href="/pages/menuAmh.html"
+            ><i class="fas fa-utensils"></i> ምግብ ዝርዝር</a
+          >
+        </li>
+        <li>
+          <a href="/pages/AmhContact.html"
+            ><i class="fas fa-envelope"></i> አግኙን</a
+          >
+        </li>
+      </ul>
 
-        <div class="nav-actions">
-            <button class="lang-btn" onclick="location.href ='/pages/contact.html'">Eng</button>
-            <div class="auth-buttons">
-                <button class="btn btn-secondary" onclick="location.href='/assets/service/amhSignIn.html'">ይግቡ</button>
-                <button class="btn btn-primary" onclick="location.href='/assets/service/amhSignUp.html'">ይመዝገቡ</button>
-            </div>
+      <div class="nav-actions">
+        <a href="/pages/amhOrder.html" class="cart-icon-link">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+
+        <button class="lang-btn" onclick="location.href = '/index.html'">
+          Eng
+        </button>
+
+        <div class="auth-buttons">
+          <button
+            class="btn btn-secondary"
+            onclick="location.href = '/assets/service/amhSignIn.html'"
+          >
+            ይግቡ
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="location.href = '/assets/service/amhSignUp.html'"
+          >
+            ይመዝገቡ
+          </button>
         </div>
+      </div>
     </nav>
-    
+
     <main>
-        <section class="page-hero-section content-section menu-hero">
-            <h1>ሙሉ ምናሌያችን፡ ጣዕምና አመጋገብ</h1>
-            <p>በጥንቃቄ የተዘጋጁ ምግቦችን፣ ባህላዊ የኢትዮጵያ ምግቦችን እና ታዋቂ ዓለም አቀፍ ምርጫዎችን ይመልከቱ። ለሁሉም ዕቃዎች ማበጀት ይቻላል!</p>
-        </section>
+      <section class="page-hero-section content-section menu-hero">
+        <h1>ሙሉ ምናሌያችን፡ ጣዕምና አመጋገብ</h1>
+        <p>
+          በጥንቃቄ የተዘጋጁ ምግቦችን፣ ባህላዊ የኢትዮጵያ ምግቦችን እና ታዋቂ ዓለም አቀፍ ምርጫዎችን ይመልከቱ። ለሁሉም
+          ዕቃዎች ማበጀት ይቻላል!
+        </p>
+      </section>
 
-        <section class="content-section menu-filter-section">
-            <div class="category-filter">
-                <button class="filter-btn active" data-category="all">ሁሉም ዕቃዎች</button>
-                <button class="filter-btn" data-category="ethiopian"><i class="fas fa-utensils"></i> የኢትዮጵያ ምግብ</button>
-                <button class="filter-btn" data-category="international"><i class="fas fa-globe"></i> ዓለም አቀፍ ምግቦች</button>
-                <button class="filter-btn" data-category="burgers"><i class="fas fa-hamburger"></i> በርገር እና ሳንድዊቾች</button>
-                <button class="filter-btn" data-category="pizza"><i class="fas fa-pizza-slice"></i> ፒዛ</button>
-                <button class="filter-btn" data-category="drinks"><i class="fas fa-mug-hot"></i> መጠጦች</button>
-            </div>
-        </section>
+      <section class="content-section menu-filter-section">
+        <div class="category-filter">
+          <button class="filter-btn active" data-category="all">
+            ሁሉም ዕቃዎች
+          </button>
+          <button class="filter-btn" data-category="ethiopian">
+            <i class="fas fa-utensils"></i> የኢትዮጵያ ምግብ
+          </button>
+          <button class="filter-btn" data-category="international">
+            <i class="fas fa-globe"></i> ዓለም አቀፍ ምግቦች
+          </button>
+          <button class="filter-btn" data-category="burgers">
+            <i class="fas fa-hamburger"></i> በርገር እና ሳንድዊቾች
+          </button>
+          <button class="filter-btn" data-category="pizza">
+            <i class="fas fa-pizza-slice"></i> ፒዛ
+          </button>
+          <button class="filter-btn" data-category="drinks">
+            <i class="fas fa-mug-hot"></i> መጠጦች
+          </button>
+        </div>
+      </section>
 
-        <section class="content-section menu-grid-section">
-    <div class="menu-grid">
-        
-        <div class="menu-item-card" data-category="ethiopian" data-nutrition='{"P":"30%", "C":"45%", "F":"25%"}'>
-            <img src="../assets/images/menu/Doro Wat (Ethiopian Chicken Stew).jpeg" alt="ዶሮ ወጥ" class="item-image">
+      <section class="content-section menu-grid-section">
+        <div class="menu-grid">
+          <div
+            class="menu-item-card"
+            data-category="ethiopian"
+            data-nutrition='{"P":"30%", "C":"45%", "F":"25%"}'
+          >
+            <img
+              src="../assets/images/menu/Doro Wat (Ethiopian Chicken Stew).jpeg"
+              alt="ዶሮ ወጥ"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>ዶሮ ወጥ (Doro Wot)</h4>
-                <p class="item-description">በበርበሬ ቅመም በቀስታ የበሰለ ቅመም የበዛበት የዶሮ ወጥ፣ በእንቁላል እና በአይብ ይቀርባል።</p>
-                <span class="item-price">ETB 280</span>
-                <button class="btn btn-secondary" onclick="addToCart('ዶሮ ወጥ (Doro Wot)', 280)">ያበጁና ይጨምሩ</button>
+              <h4>ዶሮ ወጥ (Doro Wot)</h4>
+              <p class="item-description">
+                በበርበሬ ቅመም በቀስታ የበሰለ ቅመም የበዛበት የዶሮ ወጥ፣ በእንቁላል እና በአይብ ይቀርባል።
+              </p>
+              <span class="item-price">ETB 280</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ዶሮ ወጥ (Doro Wot)', 280)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
             <div class="nutrition-overlay"></div>
-        </div>
+          </div>
 
-        <div class="menu-item-card" data-category="ethiopian" data-nutrition='{"P":"20%", "C":"55%", "F":"20%"}'>
-            <img src="../assets/images/menu/Ethiopian Food, Part 3_ Mesir Wat.jpeg" alt="ቀይ ምስር" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="ethiopian"
+            data-nutrition='{"P":"20%", "C":"55%", "F":"20%"}'
+          >
+            <img
+              src="../assets/images/menu/Ethiopian Food, Part 3_ Mesir Wat.jpeg"
+              alt="ቀይ ምስር"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>ቀይ ምስር (Key Misir Wot)</h4>
-                <p class="item-description">በቅመም በተቀመመ የኢትዮጵያ ቅይጥ በቀስታ የበሰለ ቀይ ምስር ወጥ። የዕፅዋት ፕሮቲን ምንጭ።</p>
-                <span class="item-price">ETB 180</span>
-                <button class="btn btn-secondary" onclick="addToCart('ቀይ ምስር (Key Misir Wot)', 180)">ያበጁና ይጨምሩ</button>
+              <h4>ቀይ ምስር (Key Misir Wot)</h4>
+              <p class="item-description">
+                በቅመም በተቀመመ የኢትዮጵያ ቅይጥ በቀስታ የበሰለ ቀይ ምስር ወጥ። የዕፅዋት ፕሮቲን ምንጭ።
+              </p>
+              <span class="item-price">ETB 180</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ቀይ ምስር (Key Misir Wot)', 180)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
             <div class="nutrition-overlay"></div>
-        </div>
+          </div>
 
-        <div class="menu-item-card" data-category="ethiopian" data-nutrition='{"P":"15%", "C":"60%", "F":"15%"}'>
-            <img src="../assets/images/menu/beyainet.jpeg" alt="በያይነቱ" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="ethiopian"
+            data-nutrition='{"P":"15%", "C":"60%", "F":"15%"}'
+          >
+            <img
+              src="../assets/images/menu/beyainet.jpeg"
+              alt="በያይነቱ"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>በያይነቱ (Beyaynetu)</h4>
-                <p class="item-description">የተለያዩ የፆም ወጦች (ጎመን፣ አተር ክክ፣ እና ቲኪል ጎመን ጨምሮ) ያቀፈ ናሙና።</p>
-                <span class="item-price">ETB 320</span>
-                <button class="btn btn-secondary" onclick="addToCart('በያይነቱ (Beyaynetu)', 320)">ያበጁና ይጨምሩ</button>
+              <h4>በያይነቱ (Beyaynetu)</h4>
+              <p class="item-description">
+                የተለያዩ የፆም ወጦች (ጎመን፣ አተር ክክ፣ እና ቲኪል ጎመን ጨምሮ) ያቀፈ ናሙና።
+              </p>
+              <span class="item-price">ETB 320</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('በያይነቱ (Beyaynetu)', 320)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
             <div class="nutrition-overlay"></div>
-        </div>
-        
-        <div class="menu-item-card" data-category="ethiopian" data-nutrition='{"P":"35%", "C":"10%", "F":"50%"}'>
-            <img src="../assets/images/menu/Voyage en Ethiopie.jpeg" alt="ክትፎ" class="item-image">
-            <div class="item-details">
-                <h4>ክትፎ (Kitfo)</h4>
-                <p class="item-description">በጥሩ ሁኔታ የተፈጨ ሥጋ፣ በሚጥሚጣ እና በቅቤ (ኒጥር ቅቤ) የተቀመመ። ጥሬ ወይም በትንሹ የበሰለ (ለብ ለብ) ይገኛል።</p>
-                <span class="item-price">ETB 450</span>
-                <button class="btn btn-secondary" onclick="addToCart('ክትፎ (Kitfo)', 450)">ያበጁና ይጨምሩ</button>
-            </div>
-            <div class="nutrition-overlay"></div>
-        </div>
+          </div>
 
-        <div class="menu-item-card" data-category="ethiopian" data-nutrition='{"P":"40%", "C":"15%", "F":"40%"}'>
-            <img src="../assets/images/menu/tibs.jpeg" alt="ጥብስ" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="ethiopian"
+            data-nutrition='{"P":"35%", "C":"10%", "F":"50%"}'
+          >
+            <img
+              src="../assets/images/menu/Voyage en Ethiopie.jpeg"
+              alt="ክትፎ"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>ጥብስ (Beef Tibs)</h4>
-                <p class="item-description">በቅቤ፣ በነጭ ሽንኩርት፣ በሽንኩርት እና በቃሪያ የተጠበሰ የበሬ ወይም የበግ ስጋ። ትኩስ ሆኖ ይቀርባል።</p>
-                <span class="item-price">ETB 350</span>
-                <button class="btn btn-secondary" onclick="addToCart('ጥብስ (Beef Tibs)', 350)">ያበጁና ይጨምሩ</button>
+              <h4>ክትፎ (Kitfo)</h4>
+              <p class="item-description">
+                በጥሩ ሁኔታ የተፈጨ ሥጋ፣ በሚጥሚጣ እና በቅቤ (ኒጥር ቅቤ) የተቀመመ። ጥሬ ወይም በትንሹ የበሰለ
+                (ለብ ለብ) ይገኛል።
+              </p>
+              <span class="item-price">ETB 450</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ክትፎ (Kitfo)', 450)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
             <div class="nutrition-overlay"></div>
-        </div>
+          </div>
 
-        <div class="menu-item-card" data-category="international" data-nutrition='{"P":"40%", "C":"30%", "F":"25%"}'>
-            <img src="../assets/images/menu/Grilled Chicken Salad.jpeg" alt="የተጠበሰ ዶሮ ሰላጣ" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="ethiopian"
+            data-nutrition='{"P":"40%", "C":"15%", "F":"40%"}'
+          >
+            <img
+              src="../assets/images/menu/tibs.jpeg"
+              alt="ጥብስ"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>ከፍተኛ ፕሮቲን ያለው የተጠበሰ ዶሮ ሰላጣ</h4>
-                <p class="item-description">በአትክልት ሰላጣ፣ በኩምበር፣ በቲማቲም እና በቀላል መረቅ ላይ ያለ ጥብስ የዶሮ ስጋ።</p>
-                <span class="item-price">ETB 300</span>
-                <button class="btn btn-secondary" onclick="addToCart('የተጠበሰ ዶሮ ሰላጣ', 300)">ያበጁና ይጨምሩ</button>
+              <h4>ጥብስ (Beef Tibs)</h4>
+              <p class="item-description">
+                በቅቤ፣ በነጭ ሽንኩርት፣ በሽንኩርት እና በቃሪያ የተጠበሰ የበሬ ወይም የበግ ስጋ። ትኩስ ሆኖ
+                ይቀርባል።
+              </p>
+              <span class="item-price">ETB 350</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ጥብስ (Beef Tibs)', 350)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
             <div class="nutrition-overlay"></div>
-        </div>
+          </div>
 
-        <div class="menu-item-card" data-category="international" data-nutrition='{"P":"15%", "C":"65%", "F":"15%"}'>
-            <img src="../assets/images/menu/Creamy Vegetable Pasta (Vegan!).jpeg" alt="የአትክልት ፓስታ" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="international"
+            data-nutrition='{"P":"40%", "C":"30%", "F":"25%"}'
+          >
+            <img
+              src="../assets/images/menu/Grilled Chicken Salad.jpeg"
+              alt="የተጠበሰ ዶሮ ሰላጣ"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>ክሬም ያለው የአትክልት ፓስታ (V)</h4>
-                <p class="item-description">ወቅታዊ የተጠበሱ አትክልቶች (ብሮኮሊ፣ ደወል ቃሪያ፣ ዙኩኒ) ካለው ቀላል ክሬም መረቅ ጋር የተቀላቀለ ፓስታ።</p>
-                <span class="item-price">ETB 250</span>
-                <button class="btn btn-secondary" onclick="addToCart('ክሬም ያለው የአትክልት ፓስታ (V)', 250)">ያበጁና ይጨምሩ</button>
+              <h4>ከፍተኛ ፕሮቲን ያለው የተጠበሰ ዶሮ ሰላጣ</h4>
+              <p class="item-description">
+                በአትክልት ሰላጣ፣ በኩምበር፣ በቲማቲም እና በቀላል መረቅ ላይ ያለ ጥብስ የዶሮ ስጋ።
+              </p>
+              <span class="item-price">ETB 300</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('የተጠበሰ ዶሮ ሰላጣ', 300)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
             <div class="nutrition-overlay"></div>
-        </div>
-        
-        <div class="menu-item-card" data-category="international" data-nutrition='{"P":"45%", "C":"5%", "F":"45%"}'>
-            <img src="../assets/images/menu/Baked Salmon Fillets.jpeg" alt="የተጠበሰ ሳልሞን ፊሌት" class="item-image">
-            <div class="item-details">
-                <h4>የተጠበሰ ሳልሞን ፊሌት</h4>
-                <p class="item-description">በሎሚ እና በቅመማ ቅመም የተጋገረ ሳልሞን። ከአስፓራጉስ እና ከተፈጨ ድንች ጋር ይቀርባል።</p>
-                <span class="item-price">ETB 650</span>
-                <button class="btn btn-secondary" onclick="addToCart('የተጠበሰ ሳልሞን ፊሌት', 650)">ያበጁና ይጨምሩ</button>
-            </div>
-            <div class="nutrition-overlay"></div>
-        </div>
-        
-        <div class="menu-item-card" data-category="international" data-nutrition='{"P":"30%", "C":"50%", "F":"20%"}'>
-            <img src="../assets/images/menu/Chicken with Mixed Vegetable Stir Fry - recipebysara.jpeg" alt="ዶሮ እና አትክልት ስቲር ፍራይ" class="item-image">
-            <div class="item-details">
-                <h4>ዶሮ እና አትክልት ስቲር ፍራይ</h4>
-                <p class="item-description">በወጥ ውስጥ የተጠበሰ የዶሮ ስጋ ቁርጥራጮች፣ በቅመማ ቅመም በተዘጋጀ ሾርባ፣ ቡናማ ሩዝ ላይ ይቀርባል።</p>
-                <span class="item-price">ETB 320</span>
-                <button class="btn btn-secondary" onclick="addToCart('ዶሮ እና አትክልት ስቲር ፍራይ', 320)">ያበጁና ይጨምሩ</button>
-            </div>
-            <div class="nutrition-overlay"></div>
-        </div>
+          </div>
 
-        <div class="menu-item-card" data-category="international" data-nutrition='{"P":"25%", "C":"50%", "F":"25%"}'>
-            <img src="../assets/images/menu/Hearty & Classic Beef Lasagna Recipe for the Ultimate Comfort Food Experience.jpeg" alt="ክላሲክ የበሬ ላዛኛ" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="international"
+            data-nutrition='{"P":"15%", "C":"65%", "F":"15%"}'
+          >
+            <img
+              src="../assets/images/menu/Creamy Vegetable Pasta (Vegan!).jpeg"
+              alt="የአትክልት ፓስታ"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>ክላሲክ የበሬ ላዛኛ</h4>
-                <p class="item-description">የፓስታ ንብርብሮች፣ በቅመማ ቅመም የተዘጋጀ የበሬ ሥጋ፣ ሪኮታ እና ሞዛሬላ በስስ ተጋገረ።</p>
-                <span class="item-price">ETB 380</span>
-                <button class="btn btn-secondary" onclick="addToCart('ክላሲክ የበሬ ላዛኛ', 380)">ያበጁና ይጨምሩ</button>
+              <h4>ክሬም ያለው የአትክልት ፓስታ (V)</h4>
+              <p class="item-description">
+                ወቅታዊ የተጠበሱ አትክልቶች (ብሮኮሊ፣ ደወል ቃሪያ፣ ዙኩኒ) ካለው ቀላል ክሬም መረቅ ጋር የተቀላቀለ
+                ፓስታ።
+              </p>
+              <span class="item-price">ETB 250</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ክሬም ያለው የአትክልት ፓስታ (V)', 250)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
             <div class="nutrition-overlay"></div>
-        </div>
-        
-        <div class="menu-item-card" data-category="pizza" data-nutrition='{"P":"18%", "C":"55%", "F":"27%"}'>
-            <img src="../assets/images/menu/Classic Margherita Pizza.jpeg" alt="ክላሲክ ማርጋሪታ ፒዛ" class="item-image">
-            <div class="item-details">
-                <h4>ክላሲክ ማርጋሪታ ፒዛ</h4>
-                <p class="item-description">የቲማቲም ሾርባ፣ ትኩስ ሞዛሬላ አይብ እና ባሲል ቅጠሎች በቀጭን ዳቦ ላይ።</p>
-                <span class="item-price">ETB 450</span>
-                <button class="btn btn-secondary" onclick="addToCart('ክላሲክ ማርጋሪታ ፒዛ', 450)">ያበጁና ይጨምሩ</button>
-            </div>
-            <div class="nutrition-overlay"></div>
-        </div>
-        
-        <div class="menu-item-card" data-category="pizza" data-nutrition='{"P":"25%", "C":"45%", "F":"30%"}'>
-            <img src="../assets/images/menu/Spicy Pepperoni Pizza.jpeg" alt="ቅመም የበዛበት ፔፐሮኒ ፒዛ" class="item-image">
-            <div class="item-details">
-                <h4>ቅመም የበዛበት ፔፐሮኒ ፒዛ</h4>
-                <p class="item-description">ክላሲክ የቲማቲም ሾርባ፣ ሞዛሬላ እና ብዙ ቁርጥራጭ ቅመም ፔፐሮኒ።</p>
-                <span class="item-price">ETB 550</span>
-                <button class="btn btn-secondary" onclick="addToCart('ቅመም የበዛበት ፔፐሮኒ ፒዛ', 550)">ያበጁና ይጨምሩ</button>
-            </div>
-            <div class="nutrition-overlay"></div>
-        </div>
+          </div>
 
-        <div class="menu-item-card" data-category="pizza" data-nutrition='{"P":"15%", "C":"60%", "F":"20%"}'>
-            <img src="../assets/images/menu/Spicy Veggie Delight Pizza.jpeg" alt="የአትክልት ደስታ ፒዛ" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="international"
+            data-nutrition='{"P":"45%", "C":"5%", "F":"45%"}'
+          >
+            <img
+              src="../assets/images/menu/Baked Salmon Fillets.jpeg"
+              alt="የተጠበሰ ሳልሞን ፊሌት"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>የአትክልት ደስታ ፒዛ (V)</h4>
-                <p class="item-description">እንጉዳዮች፣ የወይራ ፍሬዎች፣ ቃሪያ እና ሽንኩርት የተጨመረበት።</p>
-                <span class="item-price">ETB 480</span>
-                <button class="btn btn-secondary" onclick="addToCart('የአትክልት ደስታ ፒዛ (V)', 480)">ያበጁና ይጨምሩ</button>
+              <h4>የተጠበሰ ሳልሞን ፊሌት</h4>
+              <p class="item-description">
+                በሎሚ እና በቅመማ ቅመም የተጋገረ ሳልሞን። ከአስፓራጉስ እና ከተፈጨ ድንች ጋር ይቀርባል።
+              </p>
+              <span class="item-price">ETB 650</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('የተጠበሰ ሳልሞን ፊሌት', 650)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
             <div class="nutrition-overlay"></div>
-        </div>
+          </div>
 
-        <div class="menu-item-card" data-category="burgers" data-nutrition='{"P":"30%", "C":"45%", "F":"25%"}'>
-            <img src="../assets/images/menu/burger.jpeg" alt="ዳይን ክላሲክ የበሬ በርገር" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="international"
+            data-nutrition='{"P":"30%", "C":"50%", "F":"20%"}'
+          >
+            <img
+              src="../assets/images/menu/Chicken with Mixed Vegetable Stir Fry - recipebysara.jpeg"
+              alt="ዶሮ እና አትክልት ስቲር ፍራይ"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>ዳይን ክላሲክ የበሬ በርገር</h4>
-                <p class="item-description">1/3lb የተጣፈጠ የበሬ ስጋ፣ ሰላጣ፣ ቲማቲም፣ ሽንኩርት እና ልዩ ሾርባችን በተጠበሰ ዳቦ።</p>
-                <span class="item-price">ETB 270</span>
-                <button class="btn btn-secondary" onclick="addToCart('ዳይን ክላሲክ የበሬ በርገር', 270)">ያበጁና ይጨምሩ</button>
+              <h4>ዶሮ እና አትክልት ስቲር ፍራይ</h4>
+              <p class="item-description">
+                በወጥ ውስጥ የተጠበሰ የዶሮ ስጋ ቁርጥራጮች፣ በቅመማ ቅመም በተዘጋጀ ሾርባ፣ ቡናማ ሩዝ ላይ
+                ይቀርባል።
+              </p>
+              <span class="item-price">ETB 320</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ዶሮ እና አትክልት ስቲር ፍራይ', 320)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
             <div class="nutrition-overlay"></div>
-        </div>
-        
-        <div class="menu-item-card" data-category="burgers" data-nutrition='{"P":"35%", "C":"40%", "F":"25%"}'>
-            <img src="../assets/images/menu/Spicy Hot Honey Crispy Chicken Sandwich.jpeg" alt="ቅመም ያለው ጥርት ያለ የዶሮ ሳንድዊች" class="item-image">
-            <div class="item-details">
-                <h4>ቅመም ያለው ጥርት ያለ የዶሮ ሳንድዊች</h4>
-                <p class="item-description">ቅመም ባለው ማዮ እና በተቀመመ አትክልት የተጠበሰ ዶሮ፣ በብሪዮሽ ዳቦ ላይ ይቀርባል።</p>
-                <span class="item-price">ETB 290</span>
-                <button class="btn btn-secondary" onclick="addToCart('ቅመም ያለው ጥርት ያለ የዶሮ ሳንድዊች', 290)">ያበጁና ይጨምሩ</button>
-            </div>
-            <div class="nutrition-overlay"></div>
-        </div>
-        
-        <div class="menu-item-card" data-category="burgers" data-nutrition='{"P":"20%", "C":"55%", "F":"20%"}'>
-            <img src="../assets/images/menu/Black Bean Burger.jpeg" alt="ጥቁር ባቄላ የአትክልት በርገር" class="item-image">
-            <div class="item-details">
-                <h4>ጥቁር ባቄላ የአትክልት በርገር (V)</h4>
-                <p class="item-description">ጣፋጭ፣ ስጋ የሌለው አማራጭ እንዲሆን የጥቁር ባቄላ ፓቲ በአቮካዶ እና ቺፖትል ሾርባ።</p>
-                <span class="item-price">ETB 240</span>
-                <button class="btn btn-secondary" onclick="addToCart('ጥቁር ባቄላ የአትክልት በርገር (V)', 240)">ያበጁና ይጨምሩ</button>
-            </div>
-            <div class="nutrition-overlay"></div>
-        </div>
+          </div>
 
-        <div class="menu-item-card drink-item" data-category="drinks">
-            <img src="../assets/images/menu/Drink and Liquid Photography _ Commercial Drink Photographers.jpeg" alt="ኮካ ኮላ" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="international"
+            data-nutrition='{"P":"25%", "C":"50%", "F":"25%"}'
+          >
+            <img
+              src="../assets/images/menu/Hearty & Classic Beef Lasagna Recipe for the Ultimate Comfort Food Experience.jpeg"
+              alt="ክላሲክ የበሬ ላዛኛ"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>ኮካ ኮላ (300ml)</h4>
-                <p class="item-description">ክላሲክ የቀዘቀዘ መጠጥ።</p>
-                <span class="item-price">ETB 30</span>
-                <button class="btn btn-secondary" onclick="addToCart('ኮካ ኮላ (300ml)', 30)">ወደ ትዕዛዝ ያክሉ</button>
+              <h4>ክላሲክ የበሬ ላዛኛ</h4>
+              <p class="item-description">
+                የፓስታ ንብርብሮች፣ በቅመማ ቅመም የተዘጋጀ የበሬ ሥጋ፣ ሪኮታ እና ሞዛሬላ በስስ ተጋገረ።
+              </p>
+              <span class="item-price">ETB 380</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ክላሲክ የበሬ ላዛኛ', 380)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
-        </div>
-        
-        <div class="menu-item-card drink-item" data-category="drinks">
-            <img src="../assets/images/menu/Fanta's Clever New Bottle Looks Fresh Squeezed, and Was Brutal to Design.jpeg" alt="ፋንታ ኦሬንጅ" class="item-image">
-            <div class="item-details">
-                <h4>ፋንታ ኦሬንጅ</h4>
-                <p class="item-description">መንፈስ የሚያድስ ብርቱካናማ ጣዕም ያለው ሶዳ።</p>
-                <span class="item-price">ETB 30</span>
-                <button class="btn btn-secondary" onclick="addToCart('ፋንታ ኦሬንጅ', 30)">ወደ ትዕዛዝ ያክሉ</button>
-            </div>
-        </div>
-        
-        <div class="menu-item-card drink-item" data-category="drinks">
-            <img src="../assets/images/menu/Traditional Espresso Macchiato - The Littlest Crumb.jpeg" alt="ባህላዊ ማኪያቶ" class="item-image">
-            <div class="item-details">
-                <h4>ባህላዊ ማኪያቶ</h4>
-                <p class="item-description">ጠንካራ ኤስፕሬሶ ከትንሽ ወተት ጋር።</p>
-                <span class="item-price">ETB 45</span>
-                <button class="btn btn-secondary" onclick="addToCart('ባህላዊ ማኪያቶ', 45)">ወደ ትዕዛዝ ያክሉ</button>
-            </div>
-        </div>
-        
-        <div class="menu-item-card drink-item" data-category="drinks">
-            <img src="../assets/images/menu/How to Make Authentic Masala Chai at Home_ A Spiced Indian Tea Recipe.jpeg" alt="ቅመም የበዛበት ሻይ" class="item-image">
-            <div class="item-details">
-                <h4>ቅመም የበዛበት ሻይ (ሻይ ቡና)</h4>
-                <p class="item-description">ቀረፋ እና እርድ የመሳሰሉ ሞቅ ያሉ ቅመማ ቅመሞች የተቀላቀለበት የአገር ውስጥ ጥቁር ሻይ።</p>
-                <span class="item-price">ETB 35</span>
-                <button class="btn btn-secondary" onclick="addToCart('ቅመም የበዛበት ሻይ (ሻይ ቡና)', 35)">ወደ ትዕዛዝ ያክሉ</button>
-            </div>
-        </div>
+            <div class="nutrition-overlay"></div>
+          </div>
 
-        <div class="menu-item-card drink-item" data-category="drinks">
-            <img src="../assets/images/menu/Americano.jpeg" alt="አሜሪካኖ" class="item-image">
+          <div
+            class="menu-item-card"
+            data-category="pizza"
+            data-nutrition='{"P":"18%", "C":"55%", "F":"27%"}'
+          >
+            <img
+              src="../assets/images/menu/Classic Margherita Pizza.jpeg"
+              alt="ክላሲክ ማርጋሪታ ፒዛ"
+              class="item-image"
+            />
             <div class="item-details">
-                <h4>አሜሪካኖ (ትኩስ/ቀዝቃዛ)</h4>
-                <p class="item-description">በሙቅ ውሃ የተሟጠጠ ኤስፕሬሶ። ትኩስ ወይም ቀዝቃዛ ይምረጡ።</p>
-                <span class="item-price">ETB 40</span>
-                <button class="btn btn-secondary" onclick="addToCart('አሜሪካኖ (ትኩስ/ቀዝቃዛ)', 40)">ወደ ትዕዛዝ ያክሉ</button>
+              <h4>ክላሲክ ማርጋሪታ ፒዛ</h4>
+              <p class="item-description">
+                የቲማቲም ሾርባ፣ ትኩስ ሞዛሬላ አይብ እና ባሲል ቅጠሎች በቀጭን ዳቦ ላይ።
+              </p>
+              <span class="item-price">ETB 450</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ክላሲክ ማርጋሪታ ፒዛ', 450)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
             </div>
+            <div class="nutrition-overlay"></div>
+          </div>
+
+          <div
+            class="menu-item-card"
+            data-category="pizza"
+            data-nutrition='{"P":"25%", "C":"45%", "F":"30%"}'
+          >
+            <img
+              src="../assets/images/menu/Spicy Pepperoni Pizza.jpeg"
+              alt="ቅመም የበዛበት ፔፐሮኒ ፒዛ"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>ቅመም የበዛበት ፔፐሮኒ ፒዛ</h4>
+              <p class="item-description">
+                ክላሲክ የቲማቲም ሾርባ፣ ሞዛሬላ እና ብዙ ቁርጥራጭ ቅመም ፔፐሮኒ።
+              </p>
+              <span class="item-price">ETB 550</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ቅመም የበዛበት ፔፐሮኒ ፒዛ', 550)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
+            </div>
+            <div class="nutrition-overlay"></div>
+          </div>
+
+          <div
+            class="menu-item-card"
+            data-category="pizza"
+            data-nutrition='{"P":"15%", "C":"60%", "F":"20%"}'
+          >
+            <img
+              src="../assets/images/menu/Spicy Veggie Delight Pizza.jpeg"
+              alt="የአትክልት ደስታ ፒዛ"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>የአትክልት ደስታ ፒዛ (V)</h4>
+              <p class="item-description">
+                እንጉዳዮች፣ የወይራ ፍሬዎች፣ ቃሪያ እና ሽንኩርት የተጨመረበት።
+              </p>
+              <span class="item-price">ETB 480</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('የአትክልት ደስታ ፒዛ (V)', 480)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
+            </div>
+            <div class="nutrition-overlay"></div>
+          </div>
+
+          <div
+            class="menu-item-card"
+            data-category="burgers"
+            data-nutrition='{"P":"30%", "C":"45%", "F":"25%"}'
+          >
+            <img
+              src="../assets/images/menu/burger.jpeg"
+              alt="ዳይን ክላሲክ የበሬ በርገር"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>ዳይን ክላሲክ የበሬ በርገር</h4>
+              <p class="item-description">
+                1/3lb የተጣፈጠ የበሬ ስጋ፣ ሰላጣ፣ ቲማቲም፣ ሽንኩርት እና ልዩ ሾርባችን በተጠበሰ ዳቦ።
+              </p>
+              <span class="item-price">ETB 270</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ዳይን ክላሲክ የበሬ በርገር', 270)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
+            </div>
+            <div class="nutrition-overlay"></div>
+          </div>
+
+          <div
+            class="menu-item-card"
+            data-category="burgers"
+            data-nutrition='{"P":"35%", "C":"40%", "F":"25%"}'
+          >
+            <img
+              src="../assets/images/menu/Spicy Hot Honey Crispy Chicken Sandwich.jpeg"
+              alt="ቅመም ያለው ጥርት ያለ የዶሮ ሳንድዊች"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>ቅመም ያለው ጥርት ያለ የዶሮ ሳንድዊች</h4>
+              <p class="item-description">
+                ቅመም ባለው ማዮ እና በተቀመመ አትክልት የተጠበሰ ዶሮ፣ በብሪዮሽ ዳቦ ላይ ይቀርባል።
+              </p>
+              <span class="item-price">ETB 290</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ቅመም ያለው ጥርት ያለ የዶሮ ሳንድዊች', 290)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
+            </div>
+            <div class="nutrition-overlay"></div>
+          </div>
+
+          <div
+            class="menu-item-card"
+            data-category="burgers"
+            data-nutrition='{"P":"20%", "C":"55%", "F":"20%"}'
+          >
+            <img
+              src="../assets/images/menu/Black Bean Burger.jpeg"
+              alt="ጥቁር ባቄላ የአትክልት በርገር"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>ጥቁር ባቄላ የአትክልት በርገር (V)</h4>
+              <p class="item-description">
+                ጣፋጭ፣ ስጋ የሌለው አማራጭ እንዲሆን የጥቁር ባቄላ ፓቲ በአቮካዶ እና ቺፖትል ሾርባ።
+              </p>
+              <span class="item-price">ETB 240</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ጥቁር ባቄላ የአትክልት በርገር (V)', 240)"
+              >
+                ያበጁና ይጨምሩ
+              </button>
+            </div>
+            <div class="nutrition-overlay"></div>
+          </div>
+
+          <div class="menu-item-card drink-item" data-category="drinks">
+            <img
+              src="../assets/images/menu/Drink and Liquid Photography _ Commercial Drink Photographers.jpeg"
+              alt="ኮካ ኮላ"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>ኮካ ኮላ (300ml)</h4>
+              <p class="item-description">ክላሲክ የቀዘቀዘ መጠጥ።</p>
+              <span class="item-price">ETB 30</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ኮካ ኮላ (300ml)', 30)"
+              >
+                ወደ ትዕዛዝ ያክሉ
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-item-card drink-item" data-category="drinks">
+            <img
+              src="../assets/images/menu/Fanta's Clever New Bottle Looks Fresh Squeezed, and Was Brutal to Design.jpeg"
+              alt="ፋንታ ኦሬንጅ"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>ፋንታ ኦሬንጅ</h4>
+              <p class="item-description">መንፈስ የሚያድስ ብርቱካናማ ጣዕም ያለው ሶዳ።</p>
+              <span class="item-price">ETB 30</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ፋንታ ኦሬንጅ', 30)"
+              >
+                ወደ ትዕዛዝ ያክሉ
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-item-card drink-item" data-category="drinks">
+            <img
+              src="../assets/images/menu/Traditional Espresso Macchiato - The Littlest Crumb.jpeg"
+              alt="ባህላዊ ማኪያቶ"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>ባህላዊ ማኪያቶ</h4>
+              <p class="item-description">ጠንካራ ኤስፕሬሶ ከትንሽ ወተት ጋር።</p>
+              <span class="item-price">ETB 45</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ባህላዊ ማኪያቶ', 45)"
+              >
+                ወደ ትዕዛዝ ያክሉ
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-item-card drink-item" data-category="drinks">
+            <img
+              src="../assets/images/menu/How to Make Authentic Masala Chai at Home_ A Spiced Indian Tea Recipe.jpeg"
+              alt="ቅመም የበዛበት ሻይ"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>ቅመም የበዛበት ሻይ (ሻይ ቡና)</h4>
+              <p class="item-description">
+                ቀረፋ እና እርድ የመሳሰሉ ሞቅ ያሉ ቅመማ ቅመሞች የተቀላቀለበት የአገር ውስጥ ጥቁር ሻይ።
+              </p>
+              <span class="item-price">ETB 35</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('ቅመም የበዛበት ሻይ (ሻይ ቡና)', 35)"
+              >
+                ወደ ትዕዛዝ ያክሉ
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-item-card drink-item" data-category="drinks">
+            <img
+              src="../assets/images/menu/Americano.jpeg"
+              alt="አሜሪካኖ"
+              class="item-image"
+            />
+            <div class="item-details">
+              <h4>አሜሪካኖ (ትኩስ/ቀዝቃዛ)</h4>
+              <p class="item-description">
+                በሙቅ ውሃ የተሟጠጠ ኤስፕሬሶ። ትኩስ ወይም ቀዝቃዛ ይምረጡ።
+              </p>
+              <span class="item-price">ETB 40</span>
+              <button
+                class="btn btn-secondary"
+                onclick="addToCart('አሜሪካኖ (ትኩስ/ቀዝቃዛ)', 40)"
+              >
+                ወደ ትዕዛዝ ያክሉ
+              </button>
+            </div>
+          </div>
         </div>
-        
-    </div>
-</section>
+      </section>
     </main>
-    
+
     <footer class="site-footer">
-        <p>&copy; 2024 ዳይን ኦንላይን. ሁሉም መብቶች የተጠበቁ ናቸው።</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+      <p>&copy; 2024 ዳይን ኦንላይን. ሁሉም መብቶች የተጠበቁ ናቸው።</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
     </footer>
-    <script src="../assets/js/script.js"></script> 
-</body>
+    <script src="../assets/js/script.js"></script>
+  </body>
 </html>

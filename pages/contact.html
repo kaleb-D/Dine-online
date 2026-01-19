@@ -1,107 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dine Online | Contact Us</title>
-    <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav class="main-nav">
-        <div class="nav-logo">
-            <img src="../assets/images/Dine-online-Logo.jpeg" alt="Dine Online Logo" class="logo-image" />
-            <span class="logo-text">Dine Online</span>
-        </div>
+      <div class="nav-logo">
+        <img
+          src="/assets/images/Dine-online-Logo.jpeg"
+          alt="Dine Online Logo"
+          class="logo-image"
+        />
+        <span class="logo-text">Dine Online</span>
+      </div>
 
-        <ul class="nav-links">
-            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="/pages/about.html"><i class="fas fa-info-circle"></i> About</a></li>
-            <li><a href="/pages/menu.html"><i class="fas fa-utensils"></i> Menu</a></li>
-            <li class="active"><a href="/pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li>
+          <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="/pages/about.html"
+            ><i class="fas fa-info-circle"></i> About</a
+          >
+        </li>
+        <li>
+          <a href="/pages/menu.html"><i class="fas fa-utensils"></i> Menu</a>
+        </li>
+        <li>
+          <a href="/pages/contact.html"
+            ><i class="fas fa-envelope"></i> Contact</a
+          >
+        </li>
+      </ul>
 
-        <div class="nav-actions">
-            <a href="/pages/order.html" class="cart-icon-link">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-            <button class="lang-btn" onclick="location.href ='/pages/AmhContact.html'">Amh</button>
-            <div class="auth-buttons">
-                <button class="btn btn-secondary" onclick="location.href='/assets/service/signin.html'">Sign In</button>
-                <button class="btn btn-primary" onclick="location.href='/assets/service/signUp.html'">Sign Up</button>
-            </div>
+      <div class="nav-actions">
+        <a href="/pages/order.html" class="cart-icon-link">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+
+        <button class="lang-btn" onclick="location.href = '/amhIndex.html'">
+          Amh
+        </button>
+
+        <div class="auth-buttons">
+          <button
+            class="btn btn-secondary"
+            onclick="location.href = '/assets/service/signin.html'"
+          >
+            Sign In
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="location.href = '/assets/service/signUp.html'"
+          >
+            Sign Up
+          </button>
         </div>
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
     </nav>
-    
+
     <main>
-        <header class="page-hero-section">
-            <h1>Get In Touch With Us</h1>
-            <p>We're here to help! Send us a message or find our contact details below.</p>
-        </header>
+      <header class="page-hero-section">
+        <h1>Get In Touch With Us</h1>
+        <p>
+          We're here to help! Send us a message or find our contact details
+          below.
+        </p>
+      </header>
 
-        <section class="content-section contact-details-grid">
-            
-            <div class="contact-form-wrapper">
-                <h2>Send Us a Message</h2>
-                <form class="contact-form" action="mailto:your.email@example.com" method="POST" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name"><i class="fas fa-user"></i> Name:</label>
-                        <input type="text" id="name" name="name" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email"><i class="fas fa-at"></i> Email:</label>
-                        <input type="email" id="email" name="email" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="message"><i class="fas fa-comment"></i> Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
-                </form>
+      <section class="content-section contact-details-grid">
+        <div class="contact-form-wrapper">
+          <h2>Send Us a Message</h2>
+          <form
+            class="contact-form"
+            action="mailto:your.email@example.com"
+            method="POST"
+            enctype="text/plain"
+          >
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Name:</label>
+              <input type="text" id="name" name="name" required />
             </div>
-
-            <div class="contact-info-wrapper">
-                <h2>Contact Information</h2>
-                <div class="info-card">
-                    <i class="fas fa-phone-alt info-icon"></i>
-                    <h3>Call Us</h3>
-                    <p>+251 900 123 456</p>
-                    <p>Mon - Fri, 9am - 5pm</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt info-icon"></i>
-                    <h3>Our Office</h3>
-                    <p>123 Main St, Addis Ababa</p>
-                    <p>Ethiopia</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-headset info-icon"></i>
-                    <h3>Customer Support</h3>
-                    <p>support@dineonline.et</p>
-                    <p>We typically respond within 24 hours.</p>
-                </div>
+            <div class="form-group">
+              <label for="email"><i class="fas fa-at"></i> Email:</label>
+              <input type="email" id="email" name="email" required />
             </div>
-
-        </section>
-        
-        <section class="content-section interactive-map-section">
-            <h2>Find Our Location</h2>
-            <p>Zoom, pan, and get directions directly on the map below.</p>
-            <div class="map-embed-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.8381916248263!2d38.8038121735898!3d8.894631491080732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b83dd8ee5cf9b%3A0x57faf8e35d49f3a!2zQUFTVFUgR2F0ZSAyIHwg4Yqg4Yqg4Yiz4Ym04YupIOGImOGMjeGJouGLqyAy!5e0!3m2!1sen!2sth!4v1765916682058!5m2!1sen!2sth" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+            <div class="form-group">
+              <label for="message"
+                ><i class="fas fa-comment"></i> Message:</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
             </div>
-        </section>
-
-    </main>
-    
-    <footer class="site-footer">
-        <p>&copy; 2024 Dine Online. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
         </div>
+
+        <div class="contact-info-wrapper">
+          <h2>Contact Information</h2>
+          <div class="info-card">
+            <i class="fas fa-phone-alt info-icon"></i>
+            <h3>Call Us</h3>
+            <p>+251 900 123 456</p>
+            <p>Mon - Fri, 9am - 5pm</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt info-icon"></i>
+            <h3>Our Office</h3>
+            <p>123 Main St, Addis Ababa</p>
+            <p>Ethiopia</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-headset info-icon"></i>
+            <h3>Customer Support</h3>
+            <p>support@dineonline.et</p>
+            <p>We typically respond within 24 hours.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section interactive-map-section">
+        <h2>Find Our Location</h2>
+        <p>Zoom, pan, and get directions directly on the map below.</p>
+        <div class="map-embed-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.8381916248263!2d38.8038121735898!3d8.894631491080732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b83dd8ee5cf9b%3A0x57faf8e35d49f3a!2zQUFTVFUgR2F0ZSAyIHwg4Yqg4Yqg4Yiz4Ym04YupIOGImOGMjeGJouGLqyAy!5e0!3m2!1sen!2sth!4v1765916682058!5m2!1sen!2sth"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2024 Dine Online. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
